@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TopActivity</string>
+    <string name="accessibility_service_description">开启观察权限</string>
+</resources>

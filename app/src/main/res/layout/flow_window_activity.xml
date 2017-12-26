@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:orientation="vertical"
+              android:id="@+id/ll_topview"
+              android:background="@color/translucent_colorPrimary"
+              android:layout_height="wrap_content">
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_content1"
+        android:textSize="15sp"
+        android:maxEms="18"
+        android:ellipsize="start"
+        android:textColor="@color/colorAccent"
+        android:text="看看别的应用是否显示"
+        />
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:id="@+id/tv_content2"
+        android:text="wtf"
+        />
+</LinearLayout>
