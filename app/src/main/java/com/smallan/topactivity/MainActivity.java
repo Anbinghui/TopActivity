@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
     }
 
+
     private void initData() {
         mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -54,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @param ischeck
+     */
     private void startTop(boolean ischeck) {
         if (checkAccessibility()) {
             if (ischeck) {
