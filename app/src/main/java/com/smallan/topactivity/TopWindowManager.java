@@ -2,6 +2,7 @@ package com.smallan.topactivity;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -37,7 +38,12 @@ public class TopWindowManager {
             mTopView = new TopView(mContext);
             if (mParams == null) {
                 mParams=new WindowManager.LayoutParams();
-                mParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                if (Build.VERSION.SDK_INT > 25) {
+                    mParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+                } else {
+                    mParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+                }
+            //    mParams.type = WindowManager.LayoutParams.TYPE_PHONE;
                 mParams.format = PixelFormat.RGBA_8888;
                 mParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
                         | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
